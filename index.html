@@ -6,9 +6,12 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tic Tac Toe</title>
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 </head>
 <body>
     <div id="center">
+        <div id="menu" class="startContainer">
         <div id="logo">
             <h6 class="bluesky f32">X</h6>
             <h6 class="gold f32">O</h6>
@@ -20,9 +23,64 @@
                 <div class="marker  radius-5">O</div>
             </div>
             <h2 class="low-grey">remember. x goes first</h2>
-            <button class="btn bg-gold">new game(vs cpu )</button>
-            <button class="btn bg-bluesky">new game(vs player )</button>
+            <button id="cpu" class="btn bg-gold" style="width: 400px;">new game(vs cpu )</button>
+            <button id="player" class="btn bg-bluesky" style="width: 400px;">new game(vs player )</button>
         </div>
+    </div>
+    <div id="game" class="gameContainer">
+        <div class="options">
+            <div>
+                <span class="bluesky" style="font-size: 1.6rem;">X</span>
+                 <span class="gold" style="font-size: 1.6rem;">O</span>
+            </div>
+            <div class="turn">
+                <span class="bold">X</span> turn
+            </div>
+            
+            <button class="btn retryBtn bg-grey"><i class="fa-regular fa-arrow-rotate-right"></i></button>
+        </div>
+        <div class="grid">
+            <div data-index="0" class="cell"></div>
+            <div data-index="1" class="cell"></div>
+            <div data-index="2" class="cell"></div>
+            <div data-index="3" class="cell"></div>
+            <div data-index="4" class="cell"></div>
+            <div data-index="5" class="cell"></div>
+            <div data-index="6" class="cell"></div>
+            <div data-index="7" class="cell"></div>
+            <div data-index="8" class="cell"></div>
+        </div>
+        <div class="scoreBoxes">
+            <div class="scoreBox bg-bluesky">
+                <p class="scoreSmall">X</p>
+                <p>0</p>
+            </div>
+            <div class="scoreBox bg-grey">
+                <p class="scoreSmall">Ties</p>
+                <p>0</p>
+            </div>
+            <div class="scoreBox bg-gold">
+                <p class="scoreSmall">O</p>
+                <p>0</p>
+            </div>
+            
+        </div>
+    </div>
+    
+    </div>
+    <div class="overlay">
+        <div class="result">
+            <h5 style="color: #a8bec9;">YOU WON!</h5>
+            <h1 class="bluesky"><span id="winner"></span> TAKES THE ROUND</h1>
+            <span>
+                <button class="btn bg-grey">Quit</button>
+            </span>
+            <span>
+                <button class="btn bg-gold">Next Round</button>
+            </span>
+            
+            
+        </div>    
     </div>
     <script src="main.js"></script>
 </body>

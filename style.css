@@ -1,15 +1,18 @@
-@import url('https://fonts.googleapis.com/css2?family=Kanit:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@400;700;900&display=swap');
 body{
     background-color: #192a32;
-    font-family: "Kanit";
+    font-family: "Nunito";
+    overflow: hidden;
+    font-weight: 900;
 }
 #center{
     width: 500px;
     margin:0 auto;
     text-align: center;
 }
-#logo{
+.startContainer{
     margin-top: 100px;
+    /* display: none; */
 }
 #logo > *{
     display: inline;
@@ -29,6 +32,10 @@ body{
 .low-grey{
     color:#4f6570;
 }
+.bg-grey{
+    background-color: #a8bec9;
+}
+
 .dark{
     color:#192a32;
 
@@ -39,6 +46,7 @@ body{
 .f32{
     font-size: 2rem;
 }
+
 .textcenter{
     text-align: center;
 
@@ -54,7 +62,10 @@ body{
     font-size: 0.8rem;
     text-transform: uppercase;
 }
+.gameContainer{
+    /* display: none; */
 
+}
 .markcontainer{
    box-sizing: border-box;
    padding: 0.5rem;
@@ -80,10 +91,102 @@ body{
     text-decoration: none;
     border:none;
     font-size: 16px;
-    width: 400px;
     margin: 10px;
     text-transform: uppercase;
     cursor: pointer;
     font-weight: 600;
     box-shadow: 2px 5px #142c33;
+}
+
+.options{
+    display: flex;  
+    justify-content: space-between;
+    align-items: baseline;
+    padding-left: 100px;
+    padding-right: 100px;
+    position: relative;
+    top: 90px;
+    left: 25px;
+
+
+}
+.grid{
+    display: grid;
+    gap: 3px;
+    grid-template-columns: repeat(3,1fr);
+    padding: 100px
+}
+.cell{
+    background-color: #1f3540;
+    padding: 20px;
+    border-radius: 10px;
+    width: 60px;
+    height: 60px;
+    margin: 5px;
+    box-shadow: 0px 6px #0f202a;
+    font-size: 35px;
+    cursor: pointer;
+}
+.retryBtn{
+    padding: 0.5rem;
+    width: 40px;
+    height: 40px;
+    box-shadow: 0px 4px #0f202a;
+    border-radius: 6px;
+    font-size: 1.2rem;
+}
+.turn{
+    width: 100px;
+    padding: 0.5rem;
+    border-radius: 10px;
+    font-size: 1rem;
+    background-color: #1f3540;
+    text-align: center;
+    color: #a8bec9;
+    box-shadow: 0px 6px #0f202a;
+    
+}
+.bold{
+    font-weight: 900;
+}
+.scoreBoxes{
+    display: flex;
+    justify-content: space-evenly;
+    position: relative;
+    bottom: 90px;
+    left: 20px;
+    padding: 0 60px;
+}
+.scoreBox{
+    width: 80px;
+    padding: 6px;
+    border-radius: 10px;
+    font-size: 1rem;
+    font-weight: 400;
+}
+.scoreBox p{
+    margin: 0;
+}
+.scoreBox .scoreSmall{
+    font-weight: 300;
+    font-size: 14px;
+}
+.overlay{
+    position: fixed;
+    z-index: 99999;
+    background-color: rgba(0, 0, 0, 0.3);
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    display: none;
+}
+.result{
+    position: absolute;
+    top: 25vh;
+    text-align: center;
+    background-color: #192a32;
+    width: 100%;
+    height: 200px;
+    padding: 20px;
 }
