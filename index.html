@@ -19,8 +19,8 @@
         <div class="newGameContainer radius-5">
             <h1>pick player i's mark</h1>
             <div class="markcontainer bg-dark radius-5">
-                <div class="marker select dark radius-5">X</div>
-                <div class="marker  radius-5">O</div>
+                <div id="xSelection" class="marker select dark radius-5">X</div>
+                <div id="oSelection" class="marker  radius-5">O</div>
             </div>
             <h2 class="low-grey">remember. x goes first</h2>
             <button id="cpu" class="btn bg-gold" style="width: 400px;">new game(vs cpu )</button>
@@ -37,7 +37,7 @@
                 <span class="bold">X</span> turn
             </div>
             
-            <button class="btn retryBtn bg-grey"><i class="fa-regular fa-arrow-rotate-right"></i></button>
+            <button id="retryBtn" class="btn retryBtn bg-grey"><i class="fa-regular fa-arrow-rotate-right"></i></button>
         </div>
         <div class="grid">
             <div data-index="0" class="cell"></div>
@@ -53,30 +53,29 @@
         <div class="scoreBoxes">
             <div class="scoreBox bg-bluesky">
                 <p class="scoreSmall">X</p>
-                <p>0</p>
+                <p id="xScore">0</p>
             </div>
             <div class="scoreBox bg-grey">
                 <p class="scoreSmall">Ties</p>
-                <p>0</p>
+                <p id="tieScore">0</p>
             </div>
             <div class="scoreBox bg-gold">
                 <p class="scoreSmall">O</p>
-                <p>0</p>
+                <p id="oScore">0</p>
             </div>
-            
         </div>
     </div>
     
     </div>
-    <div class="overlay">
+    <div id="resultOverlay" class="overlay">
         <div class="result">
             <h5 style="color: #a8bec9;">YOU WON!</h5>
-            <h1 class="bluesky"><span id="winner"></span> TAKES THE ROUND</h1>
+            <h1 id="winnerContainer" class="bluesky"><span id="winner"></span></h1>
             <span>
-                <button class="btn bg-grey">Quit</button>
+                <button id="quitBtn" class="btn bg-grey">Quit</button>
             </span>
             <span>
-                <button class="btn bg-gold">Next Round</button>
+                <button id="nextRoundBtn" class="btn bg-gold">Next Round</button>
             </span>
             
             

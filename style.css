@@ -63,7 +63,7 @@ body{
     text-transform: uppercase;
 }
 .gameContainer{
-    /* display: none; */
+    display: none;
 
 }
 .markcontainer{
@@ -180,6 +180,7 @@ body{
     right: 0;
     bottom: 0;
     display: none;
+    
 }
 .result{
     position: absolute;
@@ -189,4 +190,7 @@ body{
     width: 100%;
     height: 200px;
     padding: 20px;
+    text-transform: uppercase;
+    transition: ease-in 10s;
+    
 }
